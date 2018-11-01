@@ -12,6 +12,8 @@
     <Grid>
         <ComboBox x:Name="pageRoomSizeComboBox" HorizontalAlignment="Left" Margin="309,626,0,0" VerticalAlignment="Top"
                   x:FieldModifier="public" />
+        <TextBox x:Name="searchBar" HorizontalAlignment="Left" Margin="102,59,0,0" Text="Search..." VerticalAlignment="Top" Height="70" Width="578" FontSize="36"/>
+        <Button x:Name="searchButton" Content="Search!" HorizontalAlignment="Left" Margin="750,59,0,0" VerticalAlignment="Top" Height="70" Width="83" RenderTransformOrigin="-0.421,0.527"/>
 
     </Grid>
 </Page>
