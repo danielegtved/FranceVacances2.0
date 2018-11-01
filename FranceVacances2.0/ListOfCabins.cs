@@ -8,9 +8,10 @@ namespace FranceVacances2._0
 {
     class ListOfCabins
     {
+        private MainPage _mainPage;
+        private search _search;
         public List<Cabin> cabins = new List<Cabin>();
-
-        private void CabinList()
+        public void CabinList()
         {
             cabins.Add(new Cabin("baguette 1", 1099, 4, "cabin", DateTime.Now, false));
             cabins.Add(new Cabin("baguette 2", 99, 7, "cabin", DateTime.Now, true));
@@ -21,7 +22,6 @@ namespace FranceVacances2._0
             cabins.Add(new Cabin("baguette 7", 6099, 1, "cabin", DateTime.Now, false));
             cabins.Add(new Cabin("baguette 8", 7099, 78, "cabin", DateTime.Now, false));
             cabins.Add(new Cabin("baguette 9", 8099, 103, "cabin", DateTime.Now, false));
-
         }
     }
 }

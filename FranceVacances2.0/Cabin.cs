@@ -9,12 +9,12 @@ namespace FranceVacances2._0
     class Cabin
     {
         //public List<Cabin> _cabins = new List<Cabin>();
-        private string _location;
-        private double _price;
-        private int _size;
-        private string _type;
-        private DateTime _time;
-        private bool _occupied;
+        public string _location { get; set; }
+        public double _price { get; set; }
+        public int _size { get; set; }
+        public string _type { get; set; }
+        public DateTime _time { get; set; }
+        public bool _occupied { get; set; }
 
         public Cabin(string location, double price, int size, string type, DateTime time, bool occupied)
         {
