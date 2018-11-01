@@ -22,7 +22,7 @@ namespace FranceVacances2._0
         public Filter(MainPage mainPage)
         {
             _mainPage = mainPage;
-            createLayout();
+            createLayout(); 
         }
 
         public void createLayout()
