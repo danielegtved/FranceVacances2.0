@@ -8,6 +8,8 @@ namespace FranceVacances2._0
 {
     class search
     {
+        
+
         private string _searchBar;
         private string _constantSearch = "search";
 
@@ -18,6 +20,12 @@ namespace FranceVacances2._0
 
         private void Compare()
         {
+            List<Object> ValidCabins = new List<object>();
+
+                for (int i = 0; i < UPPER; i++)
+                {
+                    if (expr)
+                }
 
         }
     }
