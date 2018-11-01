@@ -28,7 +28,10 @@ namespace FranceVacances2._0
 
         public void createLayout()
         {
-            for (int i = 1; i < 4; i++) _mainPage.pageRoomSizeComboBox.Items.Add(i + " room");
+            _mainPage.pageRoomSizeComboBox.Header = "Rooms";
+            for (int i = 1; i < 4; i++) _mainPage.pageRoomSizeComboBox.Items.Add(i + " room(s)");
+
+
         }
     }
 }
