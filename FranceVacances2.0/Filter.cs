@@ -24,12 +24,29 @@ namespace FranceVacances2._0
             _mainPage = mainPage;
             createLayout(); 
         }
-        //fuck
 
         public void createLayout()
         {
-            _mainPage.pageRoomSizeComboBox.Header = "Rooms";
-            for (int i = 1; i < 4; i++) _mainPage.pageRoomSizeComboBox.Items.Add(i + " room(s)");
+
+            ComboBox pageRoomSizeComboBox = new ComboBox();
+            pageRoomSizeComboBox.Header = "Rooms";
+            for (int i = 1; i < 4; i++) pageRoomSizeComboBox.Items.Add(i + " room(s)");
+
+            ComboBox pricesComboBox = new ComboBox();
+            pricesComboBox.Header = "Price";
+            for (int i = 0; i < 4000; i = i + 1000) pricesComboBox.Items.Add(i + "-" + (i+1000) + " kr.");
+
+            _mainPage.pageFilterButton.Content = "Filter";
+
+            _mainPage.pageFilterListView.Items.Add(pageRoomSizeComboBox);
+            _mainPage.pageFilterListView.Items.Add(pricesComboBox);
+            _mainPage.pageFilterListView.Items.Add("Hej");
+            //_mainPage.pageFilterListView.Visibility = Visibility.Collapsed;
+
+            //_mainPage.Filters.Header = "Filters";
+            //_mainPage.Filters.PlaceholderText = "HEJ";
+            //_mainPage.Filters.Items.Add(pageRoomSizeComboBox);
+            //_mainPage.Filters.Items.Add(pricesComboBox);
 
 
         }
