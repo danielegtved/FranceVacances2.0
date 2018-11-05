@@ -8,23 +8,29 @@ namespace FranceVacances2._0
 {
     class Cabin
     {
-        //public List<Cabin> _cabins = new List<Cabin>();
-        private string _location;
-        private double _price;
-        private int _size;
-        private string _type;
-        private DateTime _time;
-        private bool _occupied;
+        public ListOfCabins listOfCabins = new ListOfCabins();
+        public string region { get; set; }
+        public double price { get; set; }
+        public int amountOfRooms { get; set; }
+        public string type { get; set; }
+        public DateTime checkIn { get; set; }
+        public DateTime checkOut { get; set; }
+        public bool isOccupied { get; set; }
 
-        public Cabin(string location, double price, int size, string type, DateTime time, bool occupied)
+        public Cabin(string region, double price, int amountOfRooms, string type, bool isOccupied, DateTime checkIn, DateTime checkOut)
         {
-            this._location = location;
-            this._price = price;
-            this._size = size;
-            this._type = type;
-            this._time = time;
-            this._occupied = occupied;
+            
+            this.region = region;
+            this.price = price;
+            this.amountOfRooms = amountOfRooms;
+            this.type = type;
+            this.isOccupied = isOccupied;
+            this.checkIn = checkIn;
+            this.checkOut = checkOut;
         }
 
+        public Cabin()
+        {
+        }
     }
 }

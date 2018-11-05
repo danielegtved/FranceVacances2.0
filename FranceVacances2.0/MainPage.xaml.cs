@@ -27,8 +27,14 @@ namespace FranceVacances2._0
         {
             this.InitializeComponent();
             filter = new Filter(this);
-            
-            
+            ListOfCabins listOfCabins = new ListOfCabins();
+            listOfCabins.CabinList();
+
+        }
+
+        private void searchButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
 
         private void pageFilterButton_Click(object sender, RoutedEventArgs e)

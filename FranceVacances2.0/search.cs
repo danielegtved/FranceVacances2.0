@@ -8,7 +8,7 @@ namespace FranceVacances2._0
 {
     class search
     {
-        private Cabin cabin;
+        private Cabin cabin = new Cabin();
 
         private string _searchBar;
         private string _constantSearch = "search";
@@ -18,12 +18,21 @@ namespace FranceVacances2._0
 
         }
 
-        private void Compare()
+        private void CompareLogic(int price, int amountOfRooms, string type, DateTime checkIn, DateTime checkOut, string region)
+        {
+            List<Object> ValidCabins = new List<object>();
+            CompareSize(amountOfRooms);
+        }
+        private int CompareSize(int amountOfRooms)
         {
 
-           
-            List<Object> ValidCabins = new List<object>();
-
+            foreach (var individualCabin in cabin.listOfCabins.cabinsList) //Cabin klasse/ listofcabin klasse/ liste af cabins.
+            {
+                if (individualCabin.amountOfRooms == )
+                {
+                    
+                }
+            }
         }
     }
 }
