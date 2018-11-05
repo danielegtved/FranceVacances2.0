@@ -18,47 +18,79 @@ namespace FranceVacances2._0
 
         }
 
-        public List<Object> CompareLogic(string region, double price, int amountOfRooms, string type, DateTime checkIn, bool isOccipied, DateTime checkOut)
+        public List<Object> CompareLogic(string region, double price, int amountOfRooms, string type, bool isOccipied, DateTime checkIn, DateTime checkOut)
         {
             List<Object> validCabins = new List<object>();
-            CompareAmountOfRooms(amountOfRooms, validCabins);
-            CompareRegion(region, validCabins);
-            ComparePrice(price, validCabins);
-            CompareType(type, validCabins);
-            CompareIsOccipied(isOccipied, validCabins);
-            return validCabins;
-        }
-
-        private List<Object> CompareAmountOfRooms(int amountOfRooms, List<Object> validCabins)
-        {
-            foreach (var individualCabin in cabin.listOfCabins.CreateeCabinsList) //Cabin klasse/ listofcabin klasse/ liste af cabins.
+            foreach (var currentCabin in cabin.listOfCabins.cabinsList)
             {
-                if (individualCabin.amountOfRooms == amountOfRooms)
+                if (CompareIsOccipied(isOccipied, currentCabin) && CompareAmountOfRooms(amountOfRooms,currentCabin) && CompareRegion(region, currentCabin) && ComparePrice(price, currentCabin) && CompareType(type, currentCabin))
                 {
-                    validCabins.Add(individualCabin);
+                    validCabins.Add(currentCabin);
                 }
             }
-
             return validCabins;
         }
-        private void CompareIsOccipied(object isoccipied, List<Object> validCabins)
+
+        //private List<Object> CompareAmountOfRooms(int amountOfRooms, List<Object> validCabins)
+        //{
+        //    foreach (var individualCabin in cabin.listOfCabins.cabinsList) //Cabin klasse/ listofcabin klasse/ liste af cabins.
+        //    {
+        //        if (individualCabin.amountOfRooms == amountOfRooms)
+        //        {
+        //            validCabins.Add(individualCabin);
+        //        }
+        //    }
+
+        //    return validCabins;
+        //}
+
+        private Boolean CompareAmountOfRooms(int AmountOfRooms, Cabin validCabin)
         {
-            throw new NotImplementedException();
+            if (validCabin.amountOfRooms == AmountOfRooms)
+            {
+                return true;
+            }
+
+            return false;
+        }
+        private Boolean CompareIsOccipied(bool isoccipied, Cabin validCabin)
+        {
+            if (validCabin.isOccupied == isoccipied)
+            {
+                return false;
+            }
+
+            return true;
         }
 
-        private void CompareType(string type, List<Object> validCabins)
+        private Boolean CompareType(string type, Cabin validCabin)
         {
-            throw new NotImplementedException();
+            if (validCabin.type == type)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        private void ComparePrice(double price, List<Object> validCabins)
+        private Boolean ComparePrice(double price, Cabin validCabin)
         {
-            throw new NotImplementedException();
+            if (validCabin.price == price)
+            {
+                return true;
+            }
+
+            return false;
         }
 
-        private void CompareRegion(string region, List<Object> validCabins)
+        private Boolean CompareRegion(string region, Cabin validCabin)
         {
-            throw new NotImplementedException();
+            if (validCabin.region == region)
+            {
+                return true;
+            }
+
+            return false;
         }
     }
 }

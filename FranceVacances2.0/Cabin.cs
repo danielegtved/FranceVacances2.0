@@ -14,7 +14,7 @@ namespace FranceVacances2._0
         public int amountOfRooms { get; set; }
         public string type { get; set; }
         public DateTime checkIn { get; set; }
-        public DateTime checkOut { get; set; }
+        public DateTime checkOut { get; set; }  
         public bool isOccupied { get; set; }
 
         public Cabin(string region, double price, int amountOfRooms, string type, bool isOccupied, DateTime checkIn, DateTime checkOut)

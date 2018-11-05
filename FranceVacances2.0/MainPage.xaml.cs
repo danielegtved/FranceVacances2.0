@@ -31,7 +31,7 @@ namespace FranceVacances2._0
             search search = new search();
             filter = new Filter(this);
             ListOfCabins listOfCabins = new ListOfCabins();
-            listOfCabins.CabinList();
+            listOfCabins.CreateCabinList();
 
 
         }
