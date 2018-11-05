@@ -22,15 +22,18 @@ namespace FranceVacances2._0
         private void Compare()
         {
             List<Object> ValidCabins = new List<object>();
-            //foreach (var  in listOfCabins.cabins)
-            //{
-                
-            //}
-            for (int i = 0; i < listOfCabins.cabins.Count; i++)
+            foreach (var cabin in listOfCabins.cabinsList)
             {
-                if (listOfCabins.cabins[i]._size == size) //attribut size som bliver ændret gennem knapper / dropdownbar
+                if (this.cabin. == cabin.size)
                 {
-                    ValidCabins.Add(listOfCabins.cabins[i]);
+                    
+                }
+            }
+            for (int i = 0; i < listOfCabins.cabinsList.Count; i++)
+            {
+                if (listOfCabins.cabinsList[i].size == size) //attribut size som bliver ændret gennem knapper / dropdownbar
+                {
+                    ValidCabins.Add(listOfCabins.cabinsList[i]);
                 }
             }
 
