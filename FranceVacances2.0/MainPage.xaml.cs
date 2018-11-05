@@ -27,8 +27,10 @@ namespace FranceVacances2._0
             this.InitializeComponent();
 
             Filter filter = new Filter(this);
+            search search = new search();
             ListOfCabins listOfCabins = new ListOfCabins();
             listOfCabins.CabinList();
+
 
         }
 
