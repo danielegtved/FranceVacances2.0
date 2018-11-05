@@ -18,21 +18,54 @@ namespace FranceVacances2._0
 
         }
 
-        private void CompareLogic(int price, int amountOfRooms, string type, DateTime checkIn, DateTime checkOut, string region)
+        private void CompareLogic(string region, double price, int amountOfRooms, string type, DateTime checkIn, bool isOccipied, DateTime checkOut)
         {
-            List<Object> ValidCabins = new List<object>();
-            CompareSize(amountOfRooms);
+            List<Object> validCabins = new List<object>();
+            CompareAmountOfRooms(amountOfRooms, validCabins);
+            CompareRegion(region);
+            ComparePrice(price);
+            CompareType(type);
+            CompareIsOccipied(isOccipied);
         }
-        private int CompareSize(int amountOfRooms)
-        {
 
+        private List<Object> CompareAmountOfRoomsValidRooms(int amountOfRooms, List<Object> validCabins)
+        {
+            CompareAmountOfRooms(amountOfRooms);
+                validCabins.Add();
+
+
+            return ValidRooms;
+        }
+        private List<Object> CompareAmountOfRooms(int amountOfRooms, List<Object> validCabins)
+        {
             foreach (var individualCabin in cabin.listOfCabins.cabinsList) //Cabin klasse/ listofcabin klasse/ liste af cabins.
             {
-                if (individualCabin.amountOfRooms == )
+                if (individualCabin.amountOfRooms == amountOfRooms)
                 {
-                    
+                    validCabins.Add(individualCabin);
                 }
             }
+
+            return validCabins;
+        }
+        private void CompareIsOccipied(object isoccipied)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CompareType(string type)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ComparePrice(double price)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CompareRegion(string region)
+        {
+            throw new NotImplementedException();
         }
     }
 }
