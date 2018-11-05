@@ -18,24 +18,21 @@ namespace FranceVacances2._0
 
         }
 
-        private void Compare()
+        private void CompareLogic(int price, int amountOfRooms, string type, DateTime checkIn, DateTime checkOut, string region)
         {
             List<Object> ValidCabins = new List<object>();
+            CompareSize(amountOfRooms);
+        }
+        private int CompareSize(int amountOfRooms)
+        {
+
             foreach (var individualCabin in cabin.listOfCabins.cabinsList) //Cabin klasse/ listofcabin klasse/ liste af cabins.
             {
-                if (individualCabin.size == )
+                if (individualCabin.amountOfRooms == )
                 {
                     
                 }
             }
-            for (int i = 0; i < listOfCabins.cabinsList.Count; i++)
-            {
-                if (listOfCabins.cabinsList[i].size == size) //attribut size som bliver ændret gennem knapper / dropdownbar
-                {
-                    ValidCabins.Add(listOfCabins.cabinsList[i]);
-                }
-            }
-
         }
     }
 }
