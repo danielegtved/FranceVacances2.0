@@ -22,12 +22,14 @@ namespace FranceVacances2._0
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        private Filter filter;
         public MainPage()
         {
             this.InitializeComponent();
 
             Filter filter = new Filter(this);
             search search = new search();
+            filter = new Filter(this);
             ListOfCabins listOfCabins = new ListOfCabins();
             listOfCabins.CabinList();
 
@@ -37,6 +39,18 @@ namespace FranceVacances2._0
         private void searchButton_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void pageFilterButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (pageFilterListView.Visibility != Visibility.Collapsed)
+            {
+                pageFilterListView.Visibility = Visibility.Collapsed;
+            }
+            else
+            {
+                pageFilterListView.Visibility = Visibility.Visible;
+            }
         }
     }
 }
