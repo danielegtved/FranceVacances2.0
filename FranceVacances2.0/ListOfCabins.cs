@@ -20,6 +20,7 @@ namespace FranceVacances2._0
             cabinsList.Add(new Cabin("baguette 7", 6099, 1, "cabin", DateTime.Now, false));
             cabinsList.Add(new Cabin("baguette 8", 7099, 78, "cabin", DateTime.Now, false));
             cabinsList.Add(new Cabin("baguette 9", 8099, 103, "cabin", DateTime.Now, false));
+            cabinsList.Add(new Cabin());
         }
     }
 }

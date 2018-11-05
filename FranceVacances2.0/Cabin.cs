@@ -19,7 +19,6 @@ namespace FranceVacances2._0
 
         public Cabin(string region, double price, int amountOfRooms, string type, bool isOccupied, DateTime checkIn, DateTime checkOut)
         {
-            
             this.region = region;
             this.price = price;
             this.amountOfRooms = amountOfRooms;
