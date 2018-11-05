@@ -8,8 +8,7 @@ namespace FranceVacances2._0
 {
     class search
     {
-        private Cabin cabin;
-        ListOfCabins listOfCabins = new ListOfCabins();
+        private Cabin cabin = new Cabin();
 
         private string _searchBar;
         private string _constantSearch = "search";
@@ -22,9 +21,9 @@ namespace FranceVacances2._0
         private void Compare()
         {
             List<Object> ValidCabins = new List<object>();
-            foreach (var cabin in listOfCabins.cabinsList)
+            foreach (var individualCabin in cabin.listOfCabins.cabinsList) //Cabin klasse/ listofcabin klasse/ liste af cabins.
             {
-                if (this.cabin. == cabin.size)
+                if (individualCabin.size == )
                 {
                     
                 }

@@ -8,8 +8,8 @@ namespace FranceVacances2._0
 {
     class Cabin
     {
-        private ListOfCabins listOfCabins = new ListOfCabins();
-
+        public ListOfCabins listOfCabins = new ListOfCabins();
+        
         //public List<Cabin> _cabins = new List<Cabin>();
         public string location { get; set; }
         public double price { get; set; }
@@ -20,6 +20,7 @@ namespace FranceVacances2._0
 
         public Cabin(string location, double price, int size, string type, DateTime time, bool occupied)
         {
+            
             this.location = location;
             this.price = price;
             this.size = size;
@@ -28,5 +29,9 @@ namespace FranceVacances2._0
             this.occupied = occupied;
         }
 
+        public Cabin()
+        {
+
+        }
     }
 }

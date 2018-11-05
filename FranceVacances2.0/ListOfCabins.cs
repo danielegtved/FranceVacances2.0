@@ -8,9 +8,6 @@ namespace FranceVacances2._0
 {
     class ListOfCabins
     {
-        private Cabin _cabin;
-        private MainPage _mainPage;
-        private search _search;
         public List<Cabin> cabinsList = new List<Cabin>();
         public void CabinList()
         {
