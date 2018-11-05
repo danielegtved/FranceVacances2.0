@@ -10,10 +10,10 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
     <Grid>
-        <TextBox x:Name="searchBar" HorizontalAlignment="Left" Margin="102,59,0,0" Text="Search..." VerticalAlignment="Top" Height="70" Width="578" FontSize="36"/>
+        <AutoSuggestBox x:Name="searchBar" PlaceholderText="Search..." HorizontalAlignment="Left" Margin="102,59,0,0" VerticalAlignment="Top" Height="70" Width="578" FontSize="36" />
         <Button x:Name="searchButton" Content="Search!" HorizontalAlignment="Left" Margin="750,59,0,0" VerticalAlignment="Top" Height="70" Width="83" RenderTransformOrigin="-0.421,0.527"/>
-        <ListView x:Name="pageFilterListView" HorizontalAlignment="Left" Height="261" Margin="892,111,0,0" VerticalAlignment="Top" Width="140"
-                  x:FieldModifier="public" />
+        <ListView x:Name="pageFilterListView" HorizontalAlignment="Left" Height="450" Margin="892,111,0,0" VerticalAlignment="Top" Width="200"
+                  x:FieldModifier="public" Visibility="Collapsed" />
         <Button x:Name="pageFilterButton" Content="Button" HorizontalAlignment="Left" Margin="889,71,0,0" VerticalAlignment="Top"
                 x:FieldModifier="public" Click="pageFilterButton_Click" />
 
